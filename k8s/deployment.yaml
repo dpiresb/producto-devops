@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: miapp
-          image: miapp:latest
+          image: miapp:1.1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080

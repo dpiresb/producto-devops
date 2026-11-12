@@ -16,6 +16,8 @@ type Pagina struct {
 var plantilla = template.Must(template.ParseFiles("templates/index.html"))
 
 func inicio(w http.ResponseWriter, r *http.Request) {
+	nombrePod, _ := os.Hostname()
+	w.Header().Set("X-Pod-Name", nombrePod)
 	datos := Pagina{
 		Titulo:  "Producto 1 - Entorno de desarrollo",
 		Mensaje: "Soy alumno de la UOC",
