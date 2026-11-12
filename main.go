@@ -20,7 +20,7 @@ func inicio(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("X-Pod-Name", nombrePod)
 	datos := Pagina{
 		Titulo:  "Producto 1 - Entorno de desarrollo",
-		Mensaje: "Soy alumno de la UOC",
+		Mensaje: "Soy alumno de la UOC - versión dev",
 		Imagen:  "/static/img/uoc.jpg",
 	}
 	if err := plantilla.Execute(w, datos); err != nil {
